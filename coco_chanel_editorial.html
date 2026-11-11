@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coco Chanel — Икона и Ее История</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            black: '#0a0a0a',
+                            cream: '#FDFBF7',
+                            gray: '#1c1c1c',
+                            muted: '#737373',
+                            border: '#e5e5e0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #FDFBF7;
+            color: #0a0a0a;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .serif-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        /* Fine editorial hairline borders */
+        .border-hairline {
+            border-color: rgba(10, 10, 10, 0.12);
+        }
+
+        .border-hairline-light {
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Smooth reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Large graphic logo marquee text */
+        .stroke-text {
+            -webkit-text-stroke: 1px rgba(10, 10, 10, 0.25);
+            color: transparent;
+        }
+
+        .stroke-text-light {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FDFBF7;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0a0a0a;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md border-b border-hairline">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 h-20 flex items-center justify-between">
+            <a href="#hero" class="serif-font text-2xl font-bold tracking-[0.25em] uppercase">Chanel</a>
+            
+            <nav class="hidden md:flex space-x-10 text-[11px] uppercase tracking-[0.3em] font-medium text-neutral-500">
+                <a href="#about" class="hover:text-black transition-colors">История</a>
+                <a href="#revolution" class="hover:text-black transition-colors">Революция</a>
+                <a href="#philosophy" class="hover:text-black transition-colors">Философия</a>
+                <a href="#rules" class="hover:text-black transition-colors">Правила стиля</a>
+            </nav>
+
+            <div class="text-[10px] uppercase tracking-[0.25em] font-medium text-neutral-400 hidden sm:block">
+                1883 — 1971
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="min-h-screen pt-28 pb-16 flex flex-col justify-between max-w-7xl mx-auto px-6 sm:px-12 relative">
+        <div class="my-auto py-12">
+            <div class="reveal active">
+                <span class="inline-block text-[11px] uppercase tracking-[0.4em] mb-6 text-neutral-500 font-medium">
+                    Икона и ее история
+                </span>
+                
+                <h1 class="serif-font text-6xl sm:text-8xl md:text-9xl lg:text-[11rem] font-bold tracking-tight uppercase leading-[0.85] mb-8 select-none">
+                    Coco<br>
+                    <span class="stroke-text italic font-normal">Chanel</span>
+                </h1>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-t border-hairline pt-10 mt-12 reveal active">
+                <div class="md:col-span-7">
+                    <blockquote class="serif-font italic text-2xl sm:text-3xl md:text-4xl text-neutral-800 leading-snug">
+                        «Если хочешь быть оригинальным, будь готов к тому, что тебя будут копировать»
+                    </blockquote>
+                    <p class="text-xs uppercase tracking-[0.25em] text-neutral-400 mt-4 font-mono">— Coco Chanel</p>
+                </div>
+
+                <div class="md:col-span-5 flex flex-col justify-between h-full md:items-end">
+                    <p class="text-neutral-500 font-light text-sm leading-relaxed max-w-sm mb-6">
+                        Манифест чистоты, независимости и вневременного шика. Наследие, преобразившее мировую моду навсегда.
+                    </p>
+                    <a href="#about" class="inline-flex items-center space-x-4 text-xs uppercase tracking-[0.3em] font-semibold border-b border-black pb-2 hover:opacity-50 transition-opacity">
+                        <span>Читать дальше</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center text-[10px] uppercase tracking-[0.3em] text-neutral-400 pt-6 border-t border-hairline">
+            <span>Париж, Франция</span>
+            <span>Высокая Мода</span>
+            <span>Элегантность</span>
+        </div>
+    </section>
+
+    <!-- BANNER QUOTE -->
+    <section class="bg-black text-white py-20 border-y border-neutral-900">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 text-center reveal">
+            <span class="text-[10px] uppercase tracking-[0.5em] text-neutral-500 block mb-4">Фундаментальный принцип</span>
+            <h2 class="serif-font text-3xl sm:text-5xl md:text-6xl font-light tracking-wide uppercase max-w-5xl mx-auto leading-tight">
+                «Простота — основа всей истинной элегантности»
+            </h2>
+        </div>
+    </section>
+
+    <!-- ABOUT / BIOGRAPHY SECTION -->
+    <section id="about" class="py-32 max-w-7xl mx-auto px-6 sm:px-12 border-b border-hairline">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+            
+            <div class="lg:col-span-4 reveal">
+                <span class="text-[11px] uppercase tracking-[0.4em] text-neutral-400 block mb-3 font-semibold">Биография</span>
+                <h2 class="serif-font text-4xl sm:text-5xl font-bold leading-tight uppercase mb-8">Путь от приюта до легенды</h2>
+                
+                <div class="space-y-6 text-sm text-neutral-500 font-light tracking-wider leading-relaxed border-l border-hairline pl-6">
+                    <p><strong class="text-black font-medium">1883 год:</strong> Рождение Габриэль Бонер Шанель.</p>
+                    <p><strong class="text-black font-medium">Обазен:</strong> Строгое монастырское воспитание, сформировавшее минималистскую эстетику.</p>
+                    <p><strong class="text-black font-medium">Париж / Ритц:</strong> Десятилетия независимой жизни в отеле «Ритц» как символ свободы.</p>
+                </div>
+            </div>
+
+            <div class="lg:col-span-8 space-y-8 text-neutral-700 font-light text-lg sm:text-xl leading-relaxed reveal">
+                <p class="serif-font text-2xl sm:text-3xl text-black leading-snug font-normal">
+                    Коко Шанель, урожденная Габриэль Бонер Шанель, родилась в 1883 году и после смерти матери воспитывалась в монастырском приюте. Это строгое воспитание сформировало ее минималистский стиль и любовь к практичности.
+                </p>
+
+                <p class="text-base sm:text-lg text-neutral-600">
+                    Получившая прозвище «Коко» во время своей карьеры певицы кабаре, она прошла путь от скромных условий до революционера в мире моды. Ее связи с влиятельными мужчинами, такими как Артур «Бой» Капель, обеспечили ей поддержку для открытия первого бутика.
+                </p>
+
+                <div class="p-8 bg-neutral-100/70 border-l-2 border-black my-8">
+                    <p class="serif-font italic text-xl sm:text-2xl text-black leading-relaxed">
+                        «Шанель ценила независимость и десятилетиями жила в парижском отеле «Ритц», воплощая ту элегантность, которую она привносила в мир. Ее жизнь остается свидетельством стойкости и неподвластных времени инноваций.»
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- REVOLUTION IN FASHION SECTION -->
+    <section id="revolution" class="py-32 max-w-7xl mx-auto px-6 sm:px-12 border-b border-hairline">
+        <div class="max-w-3xl mb-20 reveal">
+            <span class="text-[11px] uppercase tracking-[0.4em] text-neutral-400 block mb-3 font-semibold">Великий переворот</span>
+            <h2 class="serif-font text-4xl sm:text-6xl font-bold uppercase tracking-tight">Революция в женской моде</h2>
+            <p class="text-neutral-500 font-light text-base mt-4">
+                Коко Шанель навсегда изменила каноны, превратив ограничивающие и тесные стили прошлых эпох в элегантную практичность.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-12">
+            
+            <div class="p-8 border border-hairline bg-white flex flex-col justify-between hover:border-black transition-colors duration-500 group reveal">
+                <div>
+                    <span class="serif-font text-4xl text-neutral-300 group-hover:text-black transition-colors block mb-6">01</span>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Освобождение от корсетов</h3>
+                    <p class="text-neutral-600 text-sm font-light leading-relaxed">
+                        Внедрение трикотажной ткани (джерси) и свободного кроя подарило женщинам свободу движений, отменив жесткие корсеты.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-hairline text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+                    Свобода силуэта
+                </div>
+            </div>
+
+            <div class="p-8 border border-hairline bg-white flex flex-col justify-between hover:border-black transition-colors duration-500 group reveal">
+                <div>
+                    <span class="serif-font text-4xl text-neutral-300 group-hover:text-black transition-colors block mb-6">02</span>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Маленькое Черное Платье</h3>
+                    <p class="text-neutral-600 text-sm font-light leading-relaxed">
+                        Трансформация черного цвета из траурного в абсолютный символ роскоши, универсальности и безупречного вкуса.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-hairline text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+                    Вне времени
+                </div>
+            </div>
+
+            <div class="p-8 border border-hairline bg-white flex flex-col justify-between hover:border-black transition-colors duration-500 group reveal">
+                <div>
+                    <span class="serif-font text-4xl text-neutral-300 group-hover:text-black transition-colors block mb-6">03</span>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Chanel № 5 & Твид</h3>
+                    <p class="text-neutral-600 text-sm font-light leading-relaxed">
+                        Создание легендарного твидового костюма и культового аромата Chanel № 5, давшего начало новой эре парфюмерии.
+                    </p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-hairline text-[10px] uppercase tracking-[0.2em] text-neutral-400">
+                    Культовые символы
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PHILOSOPHICAL / JEWELRY SECTION -->
+    <section id="philosophy" class="py-32 bg-black text-white relative">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 reveal">
+                    <span class="text-[11px] uppercase tracking-[0.4em] text-neutral-400 block mb-6 font-semibold">
+                        Ювелирное искусство
+                    </span>
+                    <h2 class="serif-font text-3xl sm:text-5xl lg:text-6xl font-light leading-tight mb-8">
+                        «Ювелирные изделия создаются не для демонстрации богатства, а для украшения женщины»
+                    </h2>
+                    <div class="w-16 h-[1px] bg-neutral-700 mb-8"></div>
+                </div>
+
+                <div class="lg:col-span-5 space-y-6 text-neutral-300 font-light text-base sm:text-lg leading-relaxed reveal">
+                    <p>
+                        Шанель совершила переворот, популяризировав бижутерию. Она доказала, что истинная элегантность и шик совершенно не зависят от демонстрации финансового богатства.
+                    </p>
+                    <p>
+                        Придерживаясь своего золотого принципа простоты, она часто советовала:
+                    </p>
+                    <blockquote class="serif-font italic text-2xl text-white border-l border-neutral-700 pl-4 py-1">
+                        «Перед выходом из дома снимите один аксессуар»
+                    </blockquote>
+                    <p class="text-sm text-neutral-400 pt-2">
+                        Ее наследие остается свидетельством индивидуальности и непринужденного шика, навсегда сформировавшего современную моду.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- RULES OF ELEGANCE SECTION -->
+    <section id="rules" class="py-32 max-w-7xl mx-auto px-6 sm:px-12 border-b border-hairline">
+        <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+            <span class="text-[11px] uppercase tracking-[0.4em] text-neutral-400 block mb-3 font-semibold">Наследие</span>
+            <h2 class="serif-font text-4xl sm:text-6xl font-bold uppercase tracking-tight">Вечные советы от Коко Шанель</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Rule 1 -->
+            <div class="p-10 border border-hairline bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="serif-font text-5xl font-bold text-black">1</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-400">Правило 01</span>
+                    </div>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Примите простоту</h3>
+                    <p class="serif-font italic text-xl text-neutral-600 leading-relaxed">
+                        «Простота — это основополагающий принцип истинной элегантности».
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-hairline text-xs text-neutral-400 font-light">
+                    Убирайте всё лишнее, оставляя только главное.
+                </div>
+            </div>
+
+            <!-- Rule 2 -->
+            <div class="p-10 border border-hairline bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="serif-font text-5xl font-bold text-black">2</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-400">Правило 02</span>
+                    </div>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Найдите свой стиль</h3>
+                    <p class="serif-font italic text-xl text-neutral-600 leading-relaxed">
+                        «Мода меняется, но стиль остается неизменным».
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-hairline text-xs text-neutral-400 font-light">
+                    Создавайте индивидуальность, а не следуйте трендам.
+                </div>
+            </div>
+
+            <!-- Rule 3 -->
+            <div class="p-10 border border-hairline bg-white hover:shadow-xl transition-all duration-500 flex flex-col justify-between reveal">
+                <div>
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="serif-font text-5xl font-bold text-black">3</span>
+                        <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-400">Правило 03</span>
+                    </div>
+                    <h3 class="serif-font text-2xl font-bold uppercase mb-4">Комфорт и уверенность</h3>
+                    <p class="serif-font italic text-xl text-neutral-600 leading-relaxed">
+                        Настоящая роскошь должна быть удобной, иначе это не роскошь.
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-hairline text-xs text-neutral-400 font-light">
+                    Приоритет — внутреннее ощущение свободы.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-20 bg-black text-white">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+            <div>
+                <span class="serif-font text-3xl font-bold tracking-[0.25em] uppercase block">Chanel</span>
+                <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-500">Посвящение Иконе Моды</span>
+            </div>
+            
+            <p class="text-xs uppercase tracking-[0.25em] text-neutral-400 text-center">
+                «Мода — это не просто платья. Мода витает в воздухе»
+            </p>
+
+            <div class="text-[10px] uppercase tracking-[0.25em] text-neutral-500">
+                © High Fashion Editorial
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Animation Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const reveals = document.querySelectorAll('.reveal');
+
+            function revealOnScroll() {
+                const windowHeight = window.innerHeight;
+                reveals.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    const elementVisible = 100;
+                    if (elementTop < windowHeight - elementVisible) {
+                        el.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // initial check
+        });
+    </script>
+</body>
+</html>
